@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<form id="myForm">
+		<table>
+			<tr>
+				<td>
+					First:
+				</td>
+				<td>
+					<input type="text" id="first">
+				</td>
+				<td>
+					<div style="display: inline" id='firstReturn'></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Second:
+				</td>
+				<td>
+					<input type="text" id="second">
+				</td>
+				<td>
+					<div style="display: inline" id='secondReturn'></div>
+				</td>
+			</tr>
+		</table>
+		<input type="button" name="button" value="submit" onClick="handleForm(this.form)">	
+	</form>
+	<script type="text/javascript">
+	document.getElementById('first').addEventListener("blur", validateFirst)
+	document.getElementById('second').addEventListener("blur", validateSecond)
+
+	function validateFirst(){
+		if (document.getElementById('first').value == 0){
+			document.getElementById('firstReturn').innerHTML = "input, please"
+		} else{
+			document.getElementById('firstReturn').innerHTML = ""
+		}
+	}
+	function validateSecond(){
+		if (document.getElementById('second').value == 0){
+			document.getElementById('secondReturn').innerHTML = "input, please"
+		} else{
+			document.getElementById('secondReturn').innerHTML = ""
+		}
+	}
+	function handleForm(form){
+		var first = form.first.value;
+		var second = form.second.value;
+
+		alert("you typed: "+ first + " first\n" + "you typed: " + second + " second") 
+	}
+	</script>
+</body>
+</html>

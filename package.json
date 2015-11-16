@@ -1,0 +1,22 @@
+{
+  "name": "html-test",
+  "version": "1.0.0",
+  "description": "testing",
+  "main": "server.js",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "express": "^4.13.3",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-size": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Frode Sundby",
+  "license": "ISC"
+}
